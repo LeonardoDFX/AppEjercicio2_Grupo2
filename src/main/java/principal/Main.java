@@ -12,13 +12,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		/*Usuario usuario = new Usuario();
-	    usuario.setUsuario("Pepe");
-	    usuario.setContrasenia("123");*/
-	    
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(Config.class);
+     	ApplicationContext appContext = new AnnotationConfigApplicationContext(Config.class);
 		
-	    UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+	    UsuarioNegocio usuarioNegocio = (UsuarioNegocio)appContext.getBean("usuarioNegocio");
 	    Usuario usuario = (Usuario)appContext.getBean("usuarioPepe");
 	    boolean estado= usuarioNegocio.agregarUsuario(usuario);
 

@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import entidad.Usuario;
+import negocio.UsuarioNegocio;
 
 @Configuration
 public class Config {
@@ -14,5 +15,10 @@ public class Config {
 		usuarioPepe.setUsuario("Pepe");
 		usuarioPepe.setContrasenia("123");
 		return usuarioPepe;
+	}
+
+	@Bean
+	public UsuarioNegocio usuarioNegocio() {
+		return new UsuarioNegocio();
 	}
 }
