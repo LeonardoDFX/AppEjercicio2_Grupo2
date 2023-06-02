@@ -10,7 +10,7 @@ import negocio.UsuarioNegocio;
 @Configuration
 public class Config {
 
-	@Bean
+	@Bean (initMethod = "initUsuarioBean", destroyMethod = "destroyUsuarioBean")
 	public Usuario usuarioPepe() {
 		Usuario usuarioPepe = new Usuario();
 		usuarioPepe.setUsuario("Pepe");
