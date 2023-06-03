@@ -48,7 +48,6 @@ public class UsuarioDao {
         
         return false;
 	}
-
 	
 	public void Update(Usuario usuario)
 	{
@@ -73,5 +72,13 @@ public class UsuarioDao {
         
         config.cerrarSession();
 
+	}
+	
+	public void initBeanUsuarioDao() {
+		System.out.println("Se inicia el Bean Usuario Dao.");
+	}
+	
+	public void destroyBeanUsuarioDao() {
+		System.out.println("Se destruye el Bean Usuario Dao.");
 	}
 }

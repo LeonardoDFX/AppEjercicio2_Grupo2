@@ -18,12 +18,12 @@ public class Config {
 		return usuarioPepe;
 	}
 
-	@Bean
+	@Bean (initMethod = "initBeanUsuarioNeg", destroyMethod = "destroyBeanUsuarioNeg")
 	public UsuarioNegocio usuarioNegocio() {
 		return new UsuarioNegocio();
 	}
 
-	@Bean
+	@Bean (initMethod = "initBeanUsuarioDao", destroyMethod = "destroyBeanUsuarioDao")
 	public UsuarioDao usuarioDao() {
 		return new UsuarioDao();
 	}
